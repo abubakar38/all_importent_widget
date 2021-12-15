@@ -8,14 +8,10 @@ class Mydate extends StatefulWidget {
 }
 
 class _MydateState extends State<Mydate> {
-  // create TimeOfDay variable
-  // TimeOfDay _timeOfDay = TimeOfDay(hour: 8, minute: 30);
   TimeOfDay _timeOfDay = TimeOfDay.now();
 
-  // show time picker method
   void _showTimePicker() {
-    showTimePicker(
-            context: context, initialTime: TimeOfDay.now(), hourLabelText: "s")
+    showTimePicker(context: context, initialTime: TimeOfDay.now())
         .then((value) => setState(() {
               _timeOfDay = value!;
             }));
